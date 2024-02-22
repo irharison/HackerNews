@@ -18,9 +18,17 @@ namespace HackerNews.Controllers
         }
 
         [HttpGet(Name = "GetNews")]
-        public IEnumerable<NewsArticle> Get(int count)
+        public ActionResult<IEnumerable<NewsArticle>> Get(int count)
         {
-            return _newsStoreLock.GetArticles(count);
+            try
+            {
+                var returnValue = _newsStoreLock.GetArticles(count);
+                return Ok(returnValue);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

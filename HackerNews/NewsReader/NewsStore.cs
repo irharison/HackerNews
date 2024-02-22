@@ -1,6 +1,7 @@
 ﻿using HackerNews.ApiDto;
 using HackerNews.Interfaces;
 
+
 namespace HackerNews.NewsReader
 {
     public class ArticleStore : INewsStore 
@@ -9,7 +10,7 @@ namespace HackerNews.NewsReader
 
         public List<NewsArticle> GetArticles(int articleCount)
         {
-            return Articles.OrderByDescending(x => x.Value.score).Select(x=>x.Value).Take(articleCount).ToList();
+            return Articles.OrderByDescending(x => x.Value.Score).Select(x=>x.Value).Take(articleCount).ToList();
         }
 
         public void AddArticle(int id, NewsArticle article)

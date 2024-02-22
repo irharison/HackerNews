@@ -73,15 +73,15 @@ namespace HackerNewsTest
         {
             return Task.FromResult(new HackerNewsArticle
             {
-                id = identifier,
-                by = string.Empty,
-                descendants = 0,
-                kids = new int[0],
-                score = 0,
-                story = string.Empty,
-                time = 0,
-                title = string.Empty,
-                url = string.Empty
+                Id = identifier,
+                By = string.Empty,
+                Descendents = 0,
+                Kids = new int[0],
+                Score = 0,
+                Story = string.Empty,
+                Time = 0,
+                Title = string.Empty,
+                Url = string.Empty
             }); ;
         }
 

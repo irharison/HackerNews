@@ -2,14 +2,14 @@
 {
     public class HackerNewsArticle
     {
-        public string by { get; set; }
-        public int descendants { get; set; }
-        public int id { get; set; }
-        public int[] kids { get; set; }
-        public int score { get; set; }
-        public int time { get; set; }
-        public string title { get; set; }
-        public string story { get; set; }
-        public string url { get; set; }
+        public string By { get; set; }
+        public int Descendents { get; set; }
+        public int Id { get; set; }
+        public int[] Kids { get; set; }
+        public int Score { get; set; }
+        public int Time { get; set; }
+        public string Title { get; set; }
+        public string Story { get; set; }
+        public string Url { get; set; }
    }
 }

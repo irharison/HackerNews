@@ -33,7 +33,7 @@ namespace HackerNews.NewsReader
 
         public void StartTask()
         {
-            //Make sure we get an initial list before we start polling.
+            //Make sure we get an initial list before we start polling, so we block when starting up
             var refreshResult = RefreshNewsFeed().Result;
             _pollingTask = new Task(() => PollForRefresh());
             _pollingTask.Start();
@@ -68,7 +68,7 @@ namespace HackerNews.NewsReader
             try
             {
                 //Get List of news stories
-                var list = _newsReader.GetNewsIds().Result;
+                var list = await _newsReader.GetNewsIds();
                 ArticleMapper mapper = new ArticleMapper();
 
                 //Get list of missing articles

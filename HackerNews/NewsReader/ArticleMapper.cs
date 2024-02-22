@@ -10,12 +10,12 @@ namespace HackerNews.NewsReader
         {
             return new NewsArticle
             {
-                title = articleToMap.title,
-                uri = articleToMap.url,
-                postedBy = articleToMap.by,
-                time = UnixTimeStampConvertor.UnixTimeStampToDateTime(articleToMap.time),
-                score = articleToMap.score,
-                commentCount = articleToMap.kids.Length
+                Title = articleToMap.Title,
+                Url = articleToMap.Url,
+                PostedBy = articleToMap.By,
+                Time = UnixTimeStampConvertor.UnixTimeStampToDateTime(articleToMap.Time),
+                Score = articleToMap.Score,
+                CommentCount = articleToMap.Kids.Length
             };
 
         }
